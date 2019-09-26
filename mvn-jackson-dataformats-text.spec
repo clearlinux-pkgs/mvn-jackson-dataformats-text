@@ -4,11 +4,12 @@
 #
 Name     : mvn-jackson-dataformats-text
 Version  : 2.9.9
-Release  : 1
+Release  : 2
 URL      : https://github.com/FasterXML/jackson-dataformats-text/archive/jackson-dataformats-text-2.9.9.tar.gz
 Source0  : https://github.com/FasterXML/jackson-dataformats-text/archive/jackson-dataformats-text-2.9.9.tar.gz
 Source1  : https://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.9.9/jackson-dataformat-csv-2.9.9.jar
 Source2  : https://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.9.9/jackson-dataformat-csv-2.9.9.pom
+Source3  : https://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformats-text/2.9.9/jackson-dataformats-text-2.9.9.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -53,6 +54,9 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/d
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.9.9
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.9.9/jackson-dataformat-csv-2.9.9.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformats-text/2.9.9
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformats-text/2.9.9/jackson-dataformats-text-2.9.9.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -61,6 +65,7 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/fasterxml/jackson/d
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.9.9/jackson-dataformat-csv-2.9.9.jar
 /usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.9.9/jackson-dataformat-csv-2.9.9.pom
+/usr/share/java/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformats-text/2.9.9/jackson-dataformats-text-2.9.9.pom
 
 %files license
 %defattr(0644,root,root,0755)
